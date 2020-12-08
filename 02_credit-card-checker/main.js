@@ -1,3 +1,10 @@
+//credit card companies name
+const amexCompany = "Amex (American Express)";
+const visaCompany = "Visa";
+const masterCompany = "Mastercard";
+const discoverCompany = "Discover";
+const notFoundCompany = "Company not found";
+
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
 const valid2 = [5, 5, 3, 5, 7, 6, 6, 7, 6, 8, 7, 5, 1, 4, 3, 9];
@@ -24,11 +31,87 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+let validateCred = (creditCardDetails) => {
+    let sum = 0;
+    let sizeOfDetails = creditCardDetails.length;
+    let toggleAddition = false;
+    for(let counter = sizeOfDetails - 1; counter >= 0; counter--) {
+        let x = creditCardDetails[counter];
+        if(toggleAddition) {
+            x = x * 2;
+            if(x > 9) {
+                x = x - 9;
+            }
+        }
+        toggleAddition = !toggleAddition;
+        sum += x;
+    }
+
+    if(sum % 10 === 0) {
+        return true;
+    }
+    return false;
+}
+
+let findInvalidCards = (arrayOfCreditCards) => {
+    let arraySize = arrayOfCreditCards.length;
+    let invalidCards = [];
+
+    for(let i=0; i<arraySize;i++){
+        let creditCard = arrayOfCreditCards[i];
+        if(!validateCred(creditCard)) {
+            invalidCards.push(creditCard);
+        }
+    }
+
+    return invalidCards;
+}
+
+let idInvalidCardCompanies = (invalidCreditCards) => {
+    let companies = [];
+    let arraySize = invalidCreditCards.length;
+
+    for(let i=0; i<arraySize;i++){
+        let creditCard = invalidCreditCards[i];
+        let firstDigit = creditCard[0];
+
+        switch(firstDigit) {
+            case 3:
+                companies.push(amexCompany);
+                break;
+            case 4:
+                companies.push(visaCompany);
+                break;
+            case 5:
+                companies.push(masterCompany);
+                break;
+            case 6:
+                companies.push(discoverCompany);
+                break;
+            default:
+                companies.push(notFoundCompany);
+                break;
+        }
+    }
+
+    const distinctCompanies = [...new Set(companies)];
+    return distinctCompanies;
+}
 
 
+// console.log(`Valid1 Credit Card is Valid - ${validateCred(valid1)}`);
+// console.log(`invalid1 Credit Card is Valid - ${validateCred(invalid1)}`);
+// console.log(`mystery1 Credit Card is Valid - ${validateCred(mystery1)}`);
+// console.log(`mystery2 Credit Card is Valid - ${validateCred(mystery2)}`);
+// console.log(`mystery3 Credit Card is Valid - ${validateCred(mystery3)}`);
+// console.log(`mystery4 Credit Card is Valid - ${validateCred(mystery4)}`);
 
+// console.log(findInvalidCards(batch));
+// console.log(idInvalidCardCompanies(findInvalidCards(batch)));
 
-
+// Test function
+console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5]));// Shouldn't print anything
+console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])); // Should print all of the numbers
 
 
 
