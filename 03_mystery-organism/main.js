@@ -127,8 +127,3 @@ for(;counter1<comparisionObjects.length;counter1++) {
 }
 console.log(`Two most related instances are ${comparisionObjects[maxIndex].instance1.dna} and ${comparisionObjects[maxIndex].instance2.dna}`);
 console.log(`Maximum similarity is ${maxValue}%`);
-
-
-
-
-
