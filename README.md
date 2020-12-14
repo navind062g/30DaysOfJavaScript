@@ -12,3 +12,4 @@ Basic Project related to Sign Up Page for any website with inputs like Username,
 #
 
 :card_file_box: Credit Card Checker:
+Using javascript to validate the credit card numbers using Luhn algorithm (https://en.wikipedia.org/wiki/Luhn_algorithm#Description).
