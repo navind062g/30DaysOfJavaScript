@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1 {
+  background-color: red;
+  background-image: linear-gradient(to right, white, #f06d06);
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/09/10/37/light-bulb-1246043_960_720.jpg");
+  border-radius: 50px;
+  opacity: 0.7;
+  height: 80vh;
+  width: 90vw;
+}
+
+.quotemessage {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  opacity: 1;
+  margin: 25% 25%;
+  border-radius: 50px;
+  border: 5px double lime;
+  background-color: black;
+}
+
+.nextquote {
+  margin: 30% auto;
+  background-color: red;
+  background-image: linear-gradient(to right, red, #f06d06);
+  color: white;
+  margin: 10px auto;
+  min-width: 100px;
+  min-height: 25px;
+  border-radius: 5px;
+  border-style: double;
+  cursor: pointer;
+}
+
+.nextquote:hover {
+  min-width: 150px;
+  min-height: 50px;
+}
