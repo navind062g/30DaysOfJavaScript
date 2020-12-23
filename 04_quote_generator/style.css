@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("background_pattern.png");
+  background-position: initial;
+  background-repeat: repeat;
+}
+
+h1 {
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hash-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/09/10/37/light-bulb-1246043_960_720.jpg");
+  border: 5px solid black;
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.quote-message,
+.quote-author,
+.quote-tags {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  opacity: 1;
+  border-radius: 15%;
+  padding: 0.5em 0.5em;
+  background-color: black;
+  margin: 5px; /* and that, will result in a 10px gap */
+}
+
+.quote-tags {
+  background-color: #f06d06;
+}
+
+.quote-message {
+  width: 50vw;
+}
+
+.nextquote {
+  margin: 30% auto;
+  background-color: red;
+  background-image: linear-gradient(to right, red, #f06d06);
+  color: white;
+  margin: 10px auto;
+  min-width: 150px;
+  min-height: 50px;
+  border-radius: 5px;
+  border-style: double;
+  border-color: #f06d06;
+  cursor: pointer;
+  font-size: large;
+}
+
+.nextquote:hover {
+  background-image: linear-gradient(45deg, red, blue);
+  border-color: #f06d06;
+  font-size: x-large;
+}
+
+.quote-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
