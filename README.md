@@ -8,15 +8,15 @@
 
 ## :rocket: Practice Projects
 
-+ :memo: **Form Validator**
-Basic Project related to Sign Up Page for any website with inputs like Username, Password and Email Address. Validation done using Pure Javascript.
+- :memo: **Form Validator**
+  Basic Project related to Sign Up Page for any website with inputs like Username, Password and Email Address. Validation done using Pure Javascript.
 
-+ :card_file_box: **Credit Card Checker *(A Project from Codecademy)***
-Validate the credit card numbers in javascript using Luhn algorithm (https://en.wikipedia.org/wiki/Luhn_algorithm#Description).
+- :card_file_box: **Credit Card Checker _(A Project from Codecademy)_**
+  Validate the credit card numbers in javascript using Luhn algorithm (https://en.wikipedia.org/wiki/Luhn_algorithm#Description).
 
-+ :monocle_face: **Mysterious Organism *(A Project from Codecademy)***
-DNA test of pAequor that can survive in their natural environment. Javascript practice for loops, arrays and objects.
+- :monocle_face: **Mysterious Organism _(A Project from Codecademy)_**
+  DNA test of pAequor that can survive in their natural environment. Javascript practice for loops, arrays and objects.
 
-27 more projects
+- :bulb: **Random Quote Generator** Quotes generated using FETCH API. Quote will be displayed using Quote Message, Author and HashTags.
 
 #
