@@ -48,6 +48,7 @@ h1 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 10px 10px 10px 10px rgb(192,192,192);
 }
 
 .quote-message,
